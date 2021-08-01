@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+ overflow-x: hidden;
+}
+/* NAVIGATION BAR CSS START */
+nav{
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    justify-content: space-between;
+}
+nav ul li{
+    padding: 20px 10px;
+}
+
+nav a:hover{
+    color: lightgreen;
+}
+@media screen and (max-width:620px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* NAVIGATION BAR CSS END */
+
+
+
+/* SLIDER CSS START */
+section{
+    width: 100vw;
+}
+.slider{
+    /* border: 2px solid black; */
+    margin: 0px auto;
+    overflow: hidden;
+}
+.slider, .slider-content img{
+    height: 341px;
+    width: 800px;
+    /* border: 2px solid red; */
+}
+.slider-content{
+    width: 4800px;
+    animation: 10s ease-in-out infinite alternate slider;
+}
+@keyframes slider {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-800px);
+    }
+    50%{
+        transform: translateX(-1600px);
+    }
+    75%{
+        transform: translateX(-2400px);
+    }
+    100%{
+        transform: translateX(-3200px);
+    }
+}
+.slider-content:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+/* ANIMATION CSS END */
+
+/* MAIN CSS */
+
+#container{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 75vw;
+    /* border: 1px solid black; */
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure{
+    width: 200px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgb(104,104,104);
+    transition: 100ms;
+}
+figure:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+figure img{
+    height: 200px;
+    width: 100%;
+}
+figcaption button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: none;
+}
+figcaption button:hover{
+    background: lightblue;
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN CSS END */
+
+/* FOOTER CSS */
+
+
+footer{
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+footer .info{
+    font-family: cursive;
+    color: whitesmoke;
+}
+footer .icons ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.icons ul li .fa:hover{
+    color: palevioletred;
+    transition: 0.3s ease-in;
+}
+@media screen and (max-width:620px){
+    footer .icons ul{
+        width: 20px;
+    }
+}
