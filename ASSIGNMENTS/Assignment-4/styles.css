@@ -4,10 +4,14 @@
 }
 body{
  overflow-x: hidden;
+ background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
 }
 /* NAVIGATION BAR CSS START */
 nav{
-    background-color: #343a40;
+    background: rgb(12,12,14);
+background: linear-gradient(90deg, rgba(12,12,14,0.9307073171065301) 4%, rgba(126,127,166,1) 72%, rgba(169,169,223,1) 100%, rgba(0,212,255,1) 100%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -132,7 +136,8 @@ figcaption button:hover{
 
 
 footer{
-    background-color: #343a40;
+    background: rgb(12,12,14);
+background: linear-gradient(90deg, rgba(12,12,14,0.9307073171065301) 4%, rgba(126,127,166,1) 72%, rgba(169,169,223,1) 100%, rgba(0,212,255,1) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
