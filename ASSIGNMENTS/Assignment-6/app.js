@@ -44,4 +44,3 @@ function trashIt(node){
     node.parentElement.remove();
 }
 
-f
