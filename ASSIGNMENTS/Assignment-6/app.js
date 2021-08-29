@@ -49,7 +49,7 @@ function editIt(node){
     // console.log(node.parentElement.innerText);
     var val = prompt("Change text");
     // console.log(val);
-    if(val != ""){
+    if(val != "" && val != null){
     var x = `${val} <i class="fas fa-pen edit" onclick="editIt(this)" aria-hidden="true"></i> <i class="fas fa-trash-alt trash" onclick="trashIt(this)" aria-hidden="true"></i> <i class="fa fa-angle-double-up up" onclick="moveUp(this)" aria-hidden="true"></i> <i class="fa fa-angle-double-down down" onclick="moveDown(this)" aria-hidden="true"></i>`;
     node.parentElement.innerHTML = x; 
     }

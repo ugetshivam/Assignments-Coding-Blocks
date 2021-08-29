@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    text-align: center;
+    background-color: lightgrey;
+    padding: 10px;
+    height: 100vh;
+}
+#taskbtn{
+    color: rgb(152, 66, 66);
+    
+    width: 20vw;
+}
+h1{
+    font-family: cursive;
+}
+li{
+    list-style: none;
+    font-size: large;
+    width: 50vw;
+    margin: 20px;
+    margin-left: 25vw;
+    margin-right: auto;
+    background-color: lightgreen;
+    border: 1px dashed red;
+    border-radius: 10px;
+}
+li i{
+    padding: 10px;
+    transition: 200ms;
+}
+
+li i:active{
+    transform: scale(1.2);
+}
+li i:hover{
+    cursor: pointer;
+}
