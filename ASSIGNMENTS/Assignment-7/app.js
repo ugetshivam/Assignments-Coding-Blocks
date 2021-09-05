@@ -31,9 +31,9 @@ function backgroundChange(weather) {
     else if(weather.includes('snow')){
         imageUrl = "https://images.unsplash.com/photo-1595391595208-204a890b02e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80";
     }
-    $('#container').css("background-image", "url(" + imageUrl + ")");
-        $('#container').css("background-repeat", "no-repeat");
-        $('#container').css("background-size", "cover");
+    $('body').css("background-image", "url(" + imageUrl + ")");
+        $('body').css("background-repeat", "no-repeat");
+        $('body').css("background-size", "cover");
   }
 fetch('https://api.openweathermap.org/data/2.5/weather?q=delhi&units=metric&appid=7c2a64da9f45a1423043dde66bd600dd')
 .then((res)=>{

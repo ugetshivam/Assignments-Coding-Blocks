@@ -4,7 +4,7 @@
 }
   /* BACKGROUND CSS*/
   body {
-    background: linear-gradient(225deg, #2e9e81, #5e8640, #739fcd);
+
     background-size: 600% 600%;
 
     -webkit-animation: AnimationName 19s ease infinite;
