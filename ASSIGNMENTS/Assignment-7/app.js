@@ -5,7 +5,6 @@ const desc =  document.getElementById('Description');
 const icon =  document.getElementById('icon');
 const dttime = document.getElementById('dt-time');
 
-
 var date = new Date();
 function backgroundChange(weather) {
     var imageUrl = "https://www.onhisowntrip.com/wp-content/uploads/2021/04/z4.jpg";
@@ -50,7 +49,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=delhi&units=metric&appi
     backgroundChange(data.weather[0].description);
 })
 .catch((err)=>{
-    console.log(err.message);
+    console.log(err);
 })
 
 
