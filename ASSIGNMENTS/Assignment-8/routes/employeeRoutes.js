@@ -42,13 +42,18 @@ router.get('/employees/:id/edit', async (req,res)=>{
 });
 // updating the employee with the given payload
 router.patch('/employees/:id', async (req, res) => {
-    
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
     const updatedEmployee = req.body;
     if(updatedEmployee.status === 'on'){
         updatedEmployee.status = true;
+        updatedEmployee.timeIn = dateTime;
     }
     else{
         updatedEmployee.status = false;
+        updatedEmployee.timeOut = dateTime;
     }
     const { id } = req.params;
     // console.log(updatedEmployee);

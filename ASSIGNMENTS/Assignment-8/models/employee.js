@@ -21,6 +21,14 @@ const employeeSchema = mongoose.Schema({
     status:{
         type:Boolean,
         default:false
+    },
+    timeIn:{
+        type:String,
+        default:"No data"
+    },
+    timeOut:{
+        type:String,
+        default:"No data"
     }
 });
 
