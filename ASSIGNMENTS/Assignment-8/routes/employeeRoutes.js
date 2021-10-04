@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Employee = require('../models/employee');
-
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.API_KEY)
 // Show All Employees
 router.get('/employees', async (req,res)=>{
     const employees = await Employee.find({});
@@ -18,7 +19,21 @@ router.post('/employees', async (req,res)=>{
     const newEmployee = {
         ...req.body
     };
-
+    const msg = {
+        to: newEmployee.email, // Change to your recipient
+        from: 'shivam0156.cse19@chitkara.edu.in', // Change to your verified sender
+        subject: 'New Employee',
+        text: 'Welcome to the company, you have been added to the database',
+        html: '<strong>Welcome to the company, you have been added to the database</strong>',
+      }
+      sgMail
+        .send(msg)
+        .then(() => {
+          console.log('Email sent for new employee')
+        })
+        .catch((error) => {
+          console.error(error)
+        })
     await Employee.create(newEmployee);
     res.redirect('/employees');
 });
@@ -50,10 +65,40 @@ router.patch('/employees/:id', async (req, res) => {
     if(updatedEmployee.status === 'on'){
         updatedEmployee.status = true;
         updatedEmployee.timeIn = dateTime;
+        const msg = {
+            to: updatedEmployee.email, // Change to your recipient
+            from: 'shivam0156.cse19@chitkara.edu.in', // Change to your verified sender
+            subject: 'Status',
+            text: 'You Just Checked In',
+            html: '<strong>You Just Checked In</strong>',
+          }
+          sgMail
+            .send(msg)
+            .then(() => {
+              console.log('Email sent')
+            })
+            .catch((error) => {
+              console.error(error)
+            })
     }
     else{
         updatedEmployee.status = false;
         updatedEmployee.timeOut = dateTime;
+        const msg = {
+            to: updatedEmployee.email, // Change to your recipient
+            from: 'shivam0156.cse19@chitkara.edu.in', // Change to your verified sender
+            subject: 'Status',
+            text: 'You Just Checked Out',
+            html: '<strong>You Just Checked Out</strong>',
+          }
+          sgMail
+            .send(msg)
+            .then(() => {
+              console.log('Email sent')
+            })
+            .catch((error) => {
+              console.error(error)
+            })
     }
     const { id } = req.params;
     // console.log(updatedEmployee);
