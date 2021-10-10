@@ -1,0 +1,55 @@
+ul{
+    list-style: none;
+    
+}
+
+li{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50vw;
+    /* height: 35px; */
+    padding: 16px;
+    margin: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+    text-transform: uppercase;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+li button{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+li button:active{
+    transform: scale(0.9);
+}
+li button:hover{
+    cursor: pointer;
+}
+
+li #del{
+    background-color: red;
+}
+li #edit{
+    background-color: lightgreen;
+}
+li #up{
+    background-color: skyblue;
+}
+li #down{
+    background-color: violet;
+}
+
+input{
+    height: 5vh;
+    width: 30vw;
+}
+#tskbtn{
+    width: 9vw;
+    height: 6vh;
+    border-radius: 4px;
+}
